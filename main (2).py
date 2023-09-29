@@ -1,25 +1,20 @@
-class Player:
-    def play(self):
-        print("The player is playing cricket.")
+# Write a function called linear_search_product.
 
+def linear_search_product(products, target_product):
+    indices = []
+    for index, product in enumerate(products):
+        if product == target_product:
+            indices.append(index)
+    return indices
 
-class Batsman(Player):
-    def play(self):
-        print("The batsman is batting.")
+# Sample list of products
+product_list = ["apple", "banana", "orange", "apple", "grape", "apple"]
 
+# Target product to search for
+target_product = "apple"
 
-class Bowler(Player):
-    def play(self):
-        print("The bowler is bowling.")
+# Call the function
+result = linear_search_product(product_list, target_product)
 
-
-# Testing the Player, Batsman, and Bowler classes
-if __name__ == "__main__":
-    player = Player()
-    player.play()  
-
-    batsman = Batsman()
-    batsman.play()  
-
-    bowler = Bowler()
-    bowler.play()  
+# Print the result without a message
+print(result)
